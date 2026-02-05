@@ -1,6 +1,9 @@
 from fastapi import FastAPI
-from api.routes import router
+from app.api.routes import router
 
-app = FastAPI()
+app = FastAPI(
+    title="ABNT DOCX Formatter",
+    version="0.1.0"
+)
 
 app.include_router(router)

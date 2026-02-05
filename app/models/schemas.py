@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-class DocumentRequest(BaseModel):
-    title: str
-    author: str
-    pages: int
+class DocxUploadResponse(BaseModel):
+    filename: str
+    raw_text: str
+    paragraphs: list[str]
